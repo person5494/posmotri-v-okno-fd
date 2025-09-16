@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="./styles/preloader.css" />
     <link rel="stylesheet" href="./styles/error.css" />
   </head>
+
   <body class="page">
     <main class="content">
       <section class="result">
         <div class="result__video-container">
-          <video src="" controls class="result__video" poster=""></video>
+          <video src="" controls muted class="result__video" poster=""></video>
         </div>
         <form class="search-form">
           <fieldset class="search-form__fieldset">
@@ -95,7 +96,7 @@
     </template>
 
     <template class="cards-list-item-template">
-      <li class="content__list-item">
+      <li class="content__list-item content__list--margin-left">
         <a href="#0" class="content__card-link">
           <article class="content__video-card">
             <div class="content__video-card-description-container">
@@ -108,7 +109,9 @@
       </li>
     </template>
     <template class="more-button-template">
-      <button class="button more-button">Показать еще</button>
+      <button class="button more-button content__list--margin-left">
+        Показать еще
+      </button>
     </template>
 
     <template class="error-template">
