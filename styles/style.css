@@ -68,14 +68,15 @@ ol {
 }
 
 .result__video-container {
+  width: 711px;
+  height: 386px;
   position: relative;
 }
 
 .result__video {
   display: block;
   width: 100%;
-  height: auto;
-  max-height: 386px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -115,10 +116,10 @@ ol {
   width: 225px;
   padding-top: 1.5px;
   padding-bottom: 1.5px;
-  font-family: "Fira Sans Condensed", sans-serif;
+  font-family: inherit;
   font-weight: 400;
   font-size: 18px;
-  color: #fff;
+  color: currentColor;
   background-color: transparent;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -148,6 +149,7 @@ ol {
 }
 
 .search-form__checkbox {
+  appearance: none;
   outline: none;
 }
 
@@ -156,7 +158,7 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  border: 1px solid #fff;
+  outline: 1px solid #fff;
   width: 19px;
   height: 19px;
   padding: 1px;
@@ -195,7 +197,9 @@ ol {
 
 .more-button {
   flex-shrink: 0;
-  width: 100%;
+  width: calc(100% - 6px);
+  margin: 0 3px;
+  /* Не нашёл другого способа задать гибкую ширину, чтобы оставить пространство для отображения outline справа и слева в состоянии focus-visible */
 }
 
 .button:hover {
@@ -216,6 +220,9 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 26px;
+  max-inline-size: 399px;
+  inline-size: 100%;
+  block-size: 100%;
 }
 
 .content__list-container {
@@ -223,10 +230,8 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  height: 298px;
+  block-size: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding-right: 3px;
 }
 
 .content__list {
@@ -235,8 +240,9 @@ ol {
   gap: 30px;
 }
 
-.content__list--margin-left {
-  margin-left: 2px;
+.content__list-item {
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 .content__video-card {
