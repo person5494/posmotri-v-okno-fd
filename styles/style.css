@@ -221,8 +221,11 @@ ol {
   block-size: 100%;
 }
 
-.content__list-container {
+.content__list-wrapper {
   position: relative;
+}
+
+.content__list-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
