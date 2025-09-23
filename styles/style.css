@@ -223,6 +223,7 @@ ol {
 
 .content__list-wrapper {
   position: relative;
+  /* Здесь вынесено свойство на wrapper, чтобы избежать появления скроллов на прелоадере при первоначальной загрузке страницы на ПК с Windows */
 }
 
 .content__list-container {
